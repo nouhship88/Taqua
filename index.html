@@ -274,8 +274,7 @@
         }
       }
     </style>
-</style>
-
+ 
     </style>
   </head>
 
@@ -294,7 +293,7 @@
     <nav>
       <a href="#prayer-times">أوقات الصلاة</a>
       <a href="#weather">الطقس</a>
-      <a href="#ramadan">العد التنازلي لشهر رمضان</a>
+      <a href="imsakia.html" target="_blank">إمساكية رمضان</a>
       <a href="#contact">اتصل بنا</a>
     </nav>
 
@@ -304,6 +303,7 @@
         <div class="ramadan-countdown">
           <h2>العد التنازلي لشهر رمضان المبارك</h2>
           <div class="countdown-timer" id="countdown"></div>
+          <p>اللهم بلغنا رمضان وبارك لنا فيه وارزقنا صيامه وقيامه </p>
         </div>
       </section>
 
@@ -347,42 +347,10 @@
             <span id="city">جاري التحميل...</span>
           </div>
         </div>
-        <section class="ramadan-timetable" id="imsakia">
-          <h2>إمساكية رمضان</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>اليوم</th>
-                <th>وقت الإمساك</th>
-                <th>وقت الفجر</th>
-                <th>وقت المغرب</th>
-                <th>وقت الإفطار</th>
-                <th>وقت العشاء</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- مثال على الأيام -->
-              <tr>
-                <td>1 رمضان</td>
-                <td>04:30</td>
-                <td>04:40</td>
-                <td>18:15</td>
-                <td>18:15</td>
-                <td>19:30</td>
-              </tr>
-              <tr>
-                <td>2 رمضان</td>
-                <td>04:29</td>
-                <td>04:39</td>
-                <td>18:16</td>
-                <td>18:16</td>
-                <td>19:31</td>
-              </tr>
-              <!-- كرر الصفوف لباقي الأيام -->
-            </tbody>
-          </table>
-        </section>
+      </section>
+      <section class="ramadan-timetable" id="imsakia">
         
+      </section>
       
       <section class="section" id="contact">
         <form>
@@ -481,30 +449,10 @@
         updateRamadanCountdown(); // Call on page load
       });
 
-      const imsakiaAPI =
-  "https://api.aladhan.com/v1/calendarByCity?city=Gharyan&country=Libya&method=2&month=3&year=2025";
+     
 
-fetch(imsakiaAPI)
-fetch(imsakiaAPI)
-  .then((response) => response.json())
-  .then((data) => {
-    const tbody = document.querySelector(".ramadan-timetable tbody");
-    tbody.innerHTML = ""; // مسح الجدول الحالي
-    data.data.forEach((day, index) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `
-        <td>${index + 1} رمضان</td>
-        <td>${day.timings.Imsak}</td>
-        <td>${day.timings.Fajr}</td>
-        <td>${day.timings.Maghrib}</td>
-        <td>${day.timings.Maghrib}</td>
-        <td>${day.timings.Isha}</td>
-      `;
-      tbody.appendChild(row);
-    });
-  })
-  .catch((error) => console.error("Error fetching Imsakia data:", error));
-  
+ 
+
     </script>
   </body>
 </html>

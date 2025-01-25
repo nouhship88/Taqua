@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="إمساكية رمضان للمسجد" />
+    <meta name="keywords" content="إمساكية رمضان, غريان, أوقات الصلاة, رمضان ليبيا" />
+    <meta property="og:image" content="logo.png" />
+    <title>إمساكية رمضان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <style>
+      body {
+        font-family: "Cairo", sans-serif;
+        background: #eef3f9;
+        color: #2c3e50;
+        text-align: right;
+        direction: rtl;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #34495e;
+        color: white;
+        padding: 20px 0;
+        border-bottom: 4px solid #e74c3c;
+      }
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .header-logo {
+        width: 90px;
+        height: auto;
+      }
+      .header-text {
+        text-align: center;
+        flex: 1;
+      }
+      footer {
+        background-color: #34495e;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        border-top: 4px solid #e74c3c;
+      }
+      .back-home {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1.3em;
+      }
+      .back-home a {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .back-home a:hover {
+        color: #34495e;
+      }
+      .ramadan-timetable {
+        margin: 40px auto;
+        text-align: center;
+        max-width: 1000px;
+        width: 100%;
+      }
+      .ramadan-timetable h2 {
+        font-size: 2em;
+        color: #34495e;
+        margin-bottom: 20px;
+      }
+      .ramadan-timetable table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .ramadan-timetable table th, .ramadan-timetable table td {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-align: center;
+        font-size: 1.1em;
+      }
+      .ramadan-timetable table th {
+        background-color: #e74c3c;
+        color: white;
+        font-weight: bold;
+      }
+      .ramadan-timetable table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      .eid-prayer {
+        margin-top: 30px;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #e74c3c;
+      }
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .ramadan-timetable table th, .ramadan-timetable table td {
+          padding: 10px;
+          font-size: 0.9em;
+        }
+        .ramadan-timetable h2 {
+          font-size: 1.5em;
+        }
+        .header-logo {
+          width: 70px;
+        }
+        footer {
+          padding: 15px 0;
+        }
+        .back-home {
+          font-size: 1.1em;
+        }
+        .eid-prayer {
+          font-size: 1.2em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ramadan-timetable table th, .ramadan-timetable table td {
+          padding: 8px;
+          font-size: 0.85em;
+        }
+        .ramadan-timetable h2 {
+          font-size: 1.3em;
+        }
+        .header-logo {
+          width: 60px;
+        }
+        .back-home a {
+          font-size: 1.2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Same Header as Home -->
+    <header>
+      <div class="header-container">
+        <img src="logo.png" alt="Logo" class="header-logo" />
+        <div class="header-text">
+            <h1>مسجد التقوى بمدينة غريان</h1>
+            <h2>إمساكية شهر رمضان المبارك - لسنة 2025</h2>
+        </div>
+    </header>
+
+    <!-- Ramadan Timetable Section -->
+    <section class="ramadan-timetable">
+      <table>
+        <thead>
+          <tr>
+            <th>اليوم</th>
+            <th>وقت الإمساك</th>
+            <th>وقت الفجر</th>
+            <th>وقت الظهر</th>
+            <th>وقت العصر</th>
+            <th>وقت المغرب</th>
+             <th>وقت العشاء</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be populated here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Eid Prayer Note -->
+    <section class="eid-prayer">
+      <p>ملاحظة: ستكون صلاة العيد في نهاية شهر رمضان. نهنئكم بحلول عيد الفطر السعيد!</p>
+    </section>
+
+    <div class="back-home">
+      <a href="index.html">الرجوع إلى الصفحة الرئيسية</a>
+    </div>
+
+    <!-- Same Footer as Home -->
+    <footer>
+      <p>&copy; 2023 مسجد التقوى غريان | جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+      const imsakiaAPI =
+        "https://api.aladhan.com/v1/calendarByCity?city=Gharyan&country=Libya&method=2&month=3&year=2025";
+
+      fetch(imsakiaAPI)
+        .then((response) => response.json())
+        .then((data) => {
+          const tbody = document.querySelector(".ramadan-timetable tbody");
+          tbody.innerHTML = ""; // Clear existing data
+          data.data.forEach((day, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${index + 1} رمضان</td>
+              <td>${day.timings.Imsak}</td>
+              <td>${day.timings.Fajr}</td>
+              <td>${day.timings.Dhuhr}</td>
+              <td>${day.timings.Asr}</td>
+              <td>${day.timings.Maghrib}</td>
+               <td>${day.timings.Isha}</td>
+            `;
+            tbody.appendChild(row);
+          });
+        })
+        .catch((error) => console.error("Error fetching Imsakia data:", error));
+    </script>
+  </body>
+</html>
