@@ -233,8 +233,7 @@
         <thead>
           <tr>
             <th>اليوم</th>
-            <th>وقت الإمساك</th>
-            <th>وقت الفجر</th>
+             <th>وقت الفجر</th>
             <th>وقت الظهر</th>
             <th>وقت العصر</th>
             <th>وقت المغرب</th>
@@ -286,7 +285,6 @@ toggleButton.addEventListener("click", () => {
             const row = document.createElement("tr");
             row.innerHTML = `
               <td>${index + 1} رمضان</td>
-              <td>${day.timings.Imsak}</td>
               <td>${day.timings.Fajr}</td>
               <td>${day.timings.Dhuhr}</td>
               <td>${day.timings.Asr}</td>
