@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="أوقات الصلاة والطقس في مسجد التقوى غريان" />
-    <meta name="keywords" content="مسجد التقوى غريان, أوقات الصلاة, الطقس, غريان, رمضان ليبيا, العد التنازلي" />
+    <meta
+      name="description"
+      content="أوقات الصلاة والطقس في مسجد التقوى غريان"
+    />
+    <meta
+      name="keywords"
+      content="مسجد التقوى غريان, أوقات الصلاة, الطقس, غريان, رمضان ليبيا, العد التنازلي"
+    />
     <meta property="og:image" content="logo.png" />
-    <title>أوقات الصلاة والطقس - المسجد</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet" />
+    <title>مسحد التقوى - غريان</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="logo.png" type="image/x-icon" />
 
     <style>
@@ -21,7 +30,7 @@
       body {
         font-family: "Cairo", sans-serif;
         background: #eef3f9;
-        color: #2c3e50;
+        color: #c5cda7;
         text-align: right;
         direction: rtl;
       }
@@ -88,7 +97,10 @@
       .section {
         margin-bottom: 40px;
       }
-
+      .section-title {
+        text-align: center;
+        font-size: 22px;
+      }
       .prayer-times,
       .weather {
         display: flex;
@@ -120,42 +132,149 @@
         color: #e74c3c;
       }
 
-      form {
+      .events {
         background-color: #ffffff;
         padding: 20px;
         border-radius: 15px;
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
       }
 
-      form h2 {
-        margin-bottom: 15px;
-        font-size: 1.8em;
+      .event {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+
+      .event h3 {
+        font-size: 1.5em;
         color: #34495e;
       }
 
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+      .event p {
         font-size: 1.1em;
+        color: #7f8c8d;
       }
 
-      form button {
-        background-color: #e74c3c;
-        color: white;
-        padding: 10px 20px;
-        font-size: 1.1em;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+      .event-date {
+        display: block;
+        margin-top: 10px;
+        font-size: 1em;
+        color: #e74c3c;
+        font-weight: bold;
       }
 
-      form button:hover {
-        background-color: #c0392b;
+       
+      .section-title h2 {
+        text-align: center;
+        font-size: 2.2em;
+        color: #34495e;
+        margin-bottom: 20px;
       }
+
+      @media (max-width: 768px) {
+        .section-title h2 {
+          font-size: 1.8em;
+        }
+
+        .prev,
+        .next {
+          padding: 12px;
+          font-size: 1.5em;
+        }
+      }
+
+      .section-title h2 {
+        text-align: center;
+        font-size: 2em;
+        color: #34495e;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .section-title h2 {
+          font-size: 1.5em;
+        }
+      }
+
+      .section-title h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+form {
+  background-image: url("photo1.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  direction: rtl; /* Right-to-left text direction */
+}
+
+form h2 {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  color: wheat;
+  text-align: center; /* Center the heading */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1em;
+  text-align: right; /* Right-align the text for Arabic */
+  direction: rtl; /* Right-to-left text input */
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #e74c3c; /* Highlight border on focus */
+}
+
+form button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Full width for better usability */
+}
+
+form button:hover {
+  background-color: #c0392b;
+}
+
+form button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #e74c3c; /* Add focus effect */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    padding: 12px;
+  }
+
+  form button {
+    padding: 12px 25px;
+  }
+}
+
 
       footer {
         background-color: #34495e;
@@ -167,27 +286,43 @@
 
       /* Ramadan Countdown styles */
       .ramadan-countdown {
-        background-color: #34495e;
-        color: white;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        font-family: "Cairo", sans-serif;
-        margin-bottom: 40px;
-      }
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+    margin-bottom: 40px;
+  }
 
-      .ramadan-countdown h2 {
-        font-size: 2em;
-        margin-bottom: 15px;
-      }
+  .ramadan-countdown h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
 
-      .countdown-timer {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: #F39C12;
-      }
+  .countdown-timer {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #f39c12;
+  }
 
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #7f8c8d;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .progress {
+    height: 100%;
+    width: 0%;  /* Initially empty */
+    background-color: #f39c12;
+    border-radius: 10px;
+    transition: width 1s ease; /* Smooth transition for the progress bar */
+  }
       /* Ramadan Timetable styles */
       .ramadan-timetable {
         margin: 40px auto;
@@ -247,7 +382,10 @@
         .header-text p {
           font-size: 1.1em;
         }
-
+        .section-title h2 {
+          font-size: 35px;
+          margin-bottom: 6px;
+        }
         .prayer-times,
         .weather {
           flex-direction: column;
@@ -274,8 +412,6 @@
         }
       }
     </style>
- 
-    </style>
   </head>
 
   <body>
@@ -293,21 +429,25 @@
     <nav>
       <a href="#prayer-times">أوقات الصلاة</a>
       <a href="#weather">الطقس</a>
-      <a href="imsakia.html" >إمساكية رمضان</a>
+      <a href="imsakia.html">إمساكية رمضان</a>
       <a href="#contact">اتصل بنا</a>
     </nav>
 
     <div class="container">
       <!-- Ramadan Countdown Section -->
-      <section class="section" id="ramadan">
-        <div class="ramadan-countdown">
-          <h2>العد التنازلي لشهر رمضان المبارك</h2>
-          <div class="countdown-timer" id="countdown"></div>
-          <p>اللهم بلغنا رمضان وبارك لنا فيه وارزقنا صيامه وقيامه </p>
+      <section class="ramadan-countdown">
+        <h2>العد التنازلي لشهر رمضان المبارك</h2>
+        <div class="countdown-timer" id="countdown"></div>
+        <div class="progress-bar" id="progress-bar">
+          <div class="progress" id="progress"></div>
         </div>
+        <p>اللهم بلغنا رمضان وبارك لنا فيه وارزقنا صيامه وقيامه</p>
       </section>
 
       <section class="section" id="prayer-times">
+        <div class="section-title">
+          <h2>مواعيد الصلاة لهذا اليوم</h2>
+        </div>
         <div class="prayer-times">
           <div>
             <h2>الفجر</h2>
@@ -333,9 +473,12 @@
       </section>
 
       <section class="section" id="weather">
+        <div class="section-title">
+          <h2>طقس غريان هذه اللحظة</h2>
+        </div>
         <div class="weather">
           <div>
-            <h2>الطقس</h2>
+            <h2>درجة الحرارة</h2>
             <span id="temperature">جاري التحميل...</span>
           </div>
           <div>
@@ -348,17 +491,56 @@
           </div>
         </div>
       </section>
-      <section class="ramadan-timetable" id="imsakia">
-        
+      <section class="ramadan-timetable" id="imsakia"></section>
+
+      <section class="section" id="events">
+        <div class="section-title">
+          <h2>الإعلانات والأحداث القادمة</h2>
+        </div>
+        <div class="events">
+          <div class="event">
+            <h3>دورة تعليمية جديدة</h3>
+            <p>
+              سيتم تنظيم دورات تعليمية حول القرآن الكريم في مسجد التقوى قريبًا.
+              
+            </p>
+            <span class="event-date">التاريخ: 1 مارس 2025</span>
+          </div>
+          <div class="event">
+            <h3>محاضرات دينية</h3>
+            <p>
+              سيتم قريبًا تنظيم محاضرات دينية يومية بعد صلاة الظهر في مسجدنا،
+              فرصة رائعة للتعلم والتفقه في الدين.!
+            </p>
+            <span class="event-date">التاريخ: 2 مارس 2025</span>
+          </div>
+          <div class="event">
+            <h3>إفطار جماعي في رمضان</h3>
+            <p>
+              سينظم مسجد التقوى إفطارًا جماعيًا خلال شهر رمضان المبارك, نرجو من
+              الجميع الحضور والمشاركة في الأجواء الرمضانية.
+            </p>
+            <span class="event-date">التاريخ: 1 مارس 2025</span>
+          </div>
+        </div>
       </section>
-      
+ 
+
       <section class="section" id="contact">
-        <form>
-          <h2>اتصل بنا</h2>
-          <input type="text" placeholder="اسمك" />
-          <input type="email" placeholder="بريدك الإلكتروني" />
-          <textarea placeholder="رسالتك" rows="5"></textarea>
-          <button type="submit">إرسال</button>
+        <form id="contact-form" action="/submit" method="POST">
+          <label for="name">اسمك</label>
+          <input type="text" id="name" name="name" required />
+          <span id="name-error" style="color: red;"></span>
+        
+          <label for="email">البريد الالكتروني</label>
+          <input type="email" id="email" name="email" required />
+          <span id="email-error" style="color: red;"></span>
+        
+          <label for="message">رسالتك</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <span id="message-error" style="color: red;"></span>
+        
+          <button type="submit">أرسل</button>
         </form>
       </section>
     </div>
@@ -375,29 +557,38 @@
 
       // Ramadan Countdown script
       function updateRamadanCountdown() {
-        const ramadanStart = new Date("2025-03-01T00:00:00"); // Adjust for your region's Ramadan start date
-        const now = new Date();
-        const remainingTime = ramadanStart - now;
+    const ramadanStart = new Date("2025-03-01T00:00:00"); // Adjust for your region's Ramadan start date
+    const now = new Date();
+    const remainingTime = ramadanStart - now;
 
-        if (remainingTime > 0) {
-          const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
-          const minutes = Math.floor(
-            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-          );
-          const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    if (remainingTime > 0) {
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-          document.getElementById(
-            "countdown"
-          ).textContent = `${days} يوم و ${hours} ساعات و ${minutes} دقيقة و ${seconds} ثواني`;
-        } else {
-          document.getElementById("countdown").textContent = "رمضان قد بدأ!";
-        }
-      }
+      document.getElementById(
+        "countdown"
+      ).textContent = `${days} يوم و ${hours} ساعات و ${minutes} دقيقة و ${seconds} ثواني`;
 
-      setInterval(updateRamadanCountdown, 1000); // Update every second
+      // Calculate progress percentage
+      const totalDuration = ramadanStart - new Date("2024-03-01T00:00:00"); // Time from last Ramadan start to current Ramadan start
+      const progressPercentage = ((totalDuration - remainingTime) / totalDuration) * 100;
+
+      // Update the progress bar width
+      document.getElementById("progress").style.width = `${progressPercentage}%`;
+
+    } else {
+      document.getElementById("countdown").textContent = "رمضان قد بدأ!";
+      document.getElementById("progress").style.width = "100%"; // Full when Ramadan starts
+    }
+  }
+
+  setInterval(updateRamadanCountdown, 1000); // Update every second
 
       // Fetch prayer times and weather data
       function fetchPrayerTimes() {
@@ -450,20 +641,61 @@
       });
 
       // Toggle the visibility of the إمساكية Ramadan section when the link is clicked
-  document.querySelector("a[href='#imsakia']").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default anchor behavior
+      document
+        .querySelector("a[href='#imsakia']")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default anchor behavior
 
-    var imsakiaSection = document.getElementById("imsakia");
+          var imsakiaSection = document.getElementById("imsakia");
 
-    // Toggle visibility of the إمساكية section
-    if (imsakiaSection.style.display === "none") {
-      imsakiaSection.style.display = "block";
-    } else {
-      imsakiaSection.style.display = "none";
+          // Toggle visibility of the إمساكية section
+          if (imsakiaSection.style.display === "none") {
+            imsakiaSection.style.display = "block";
+          } else {
+            imsakiaSection.style.display = "none";
+          }
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent form submission to run validation first
+
+    // Clear previous error messages
+    document.getElementById("name-error").textContent = "";
+    document.getElementById("email-error").textContent = "";
+    document.getElementById("message-error").textContent = "";
+
+    let valid = true;
+
+    // Name validation
+    const name = document.getElementById("name").value;
+    if (name === "") {
+      document.getElementById("name-error").textContent = "Name is required.";
+      valid = false;
+    }
+
+    // Email validation
+    const email = document.getElementById("email").value;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (email === "") {
+      document.getElementById("email-error").textContent = "Email is required.";
+      valid = false;
+    } else if (!emailRegex.test(email)) {
+      document.getElementById("email-error").textContent = "Please enter a valid email.";
+      valid = false;
+    }
+
+    // Message validation
+    const message = document.getElementById("message").value;
+    if (message === "") {
+      document.getElementById("message-error").textContent = "Message cannot be empty.";
+      valid = false;
+    }
+
+    // If valid, submit the form
+    if (valid) {
+      this.submit();
     }
   });
-
- 
 
     </script>
   </body>
