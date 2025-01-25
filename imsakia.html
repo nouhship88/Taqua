@@ -25,6 +25,7 @@
         padding: 20px 0;
         border-bottom: 4px solid #e74c3c;
       }
+
       .header-container {
         display: flex;
         justify-content: space-between;
@@ -33,13 +34,25 @@
         margin: 0 auto;
         padding: 0 20px;
       }
+
       .header-logo {
         width: 90px;
         height: auto;
+        display: block;
       }
+
       .header-text {
         text-align: center;
         flex: 1;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+
+      header p {
+        font-size: 1.2em;
       }
       footer {
         background-color: #34495e;
@@ -122,6 +135,25 @@
           font-size: 1.2em;
         }
       }
+ /* Responsive styles */
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .header-logo {
+          width: 80px;
+          margin-bottom: 15px;
+        }
+
+        .header-text h1 {
+          font-size: 1.8em;
+        }
+
+        .header-text p {
+          font-size: 1.1em;
+        }
 
       @media (max-width: 480px) {
         .ramadan-timetable table th, .ramadan-timetable table td {

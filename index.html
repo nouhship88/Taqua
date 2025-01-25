@@ -185,7 +185,7 @@
       .countdown-timer {
         font-size: 2.5em;
         font-weight: bold;
-        color: #e74c3c;
+        color: #F39C12;
       }
 
       /* Ramadan Timetable styles */
@@ -293,7 +293,7 @@
     <nav>
       <a href="#prayer-times">أوقات الصلاة</a>
       <a href="#weather">الطقس</a>
-      <a href="imsakia.html" target="_blank">إمساكية رمضان</a>
+      <a href="imsakia.html" >إمساكية رمضان</a>
       <a href="#contact">اتصل بنا</a>
     </nav>
 
@@ -449,7 +449,19 @@
         updateRamadanCountdown(); // Call on page load
       });
 
-     
+      // Toggle the visibility of the إمساكية Ramadan section when the link is clicked
+  document.querySelector("a[href='#imsakia']").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    var imsakiaSection = document.getElementById("imsakia");
+
+    // Toggle visibility of the إمساكية section
+    if (imsakiaSection.style.display === "none") {
+      imsakiaSection.style.display = "block";
+    } else {
+      imsakiaSection.style.display = "none";
+    }
+  });
 
  
 
