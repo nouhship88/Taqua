@@ -13,406 +13,15 @@
     />
     <meta property="og:image" content="logo.png" />
     <title>مسحد التقوى - غريان</title>
-    <link
+    <meta name="developer" content="Noah Shanta">
+     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="logo.png" type="image/x-icon" />
-
-    <style>
-      /* General styles */
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Cairo", sans-serif;
-        background: #eef3f9;
-        color: #c5cda7;
-        text-align: right;
-        direction: rtl;
-      }
-
-      header {
-        background-color: #34495e;
-        color: white;
-        padding: 20px 0;
-        border-bottom: 4px solid #e74c3c;
-      }
-
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .header-logo {
-        width: 90px;
-        height: auto;
-        display: block;
-      }
-
-      .header-text {
-        text-align: center;
-        flex: 1;
-      }
-
-      header h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-      }
-
-      header p {
-        font-size: 1.2em;
-      }
-
-      nav {
-        background-color: #2c3e50;
-        padding: 15px;
-        text-align: center;
-      }
-
-      nav a {
-        color: #ecf0f1;
-        margin: 0 20px;
-        text-decoration: none;
-        font-size: 1.3em;
-      }
-
-      nav a:hover {
-        color: #e74c3c;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 30px auto;
-        padding: 0 20px;
-      }
-
-      .section {
-        margin-bottom: 40px;
-      }
-      .section-title {
-        text-align: center;
-        font-size: 22px;
-      }
-      .prayer-times,
-      .weather {
-        display: flex;
-        justify-content: space-between;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .prayer-times h2,
-      .weather h2 {
-        color: #34495e;
-        margin-bottom: 20px;
-        font-size: 1.5em;
-      }
-
-      .prayer-times div,
-      .weather div {
-        width: 30%;
-        text-align: center;
-      }
-
-      .prayer-times div span,
-      .weather div span {
-        display: block;
-        margin-top: 10px;
-        font-size: 1.3em;
-        color: #e74c3c;
-      }
-
-      .events {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 15px;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .event {
-        margin-bottom: 20px;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-      }
-
-      .event h3 {
-        font-size: 1.5em;
-        color: #34495e;
-      }
-
-      .event p {
-        font-size: 1.1em;
-        color: #7f8c8d;
-      }
-
-      .event-date {
-        display: block;
-        margin-top: 10px;
-        font-size: 1em;
-        color: #e74c3c;
-        font-weight: bold;
-      }
-
-       
-      .section-title h2 {
-        text-align: center;
-        font-size: 2.2em;
-        color: #34495e;
-        margin-bottom: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .section-title h2 {
-          font-size: 1.8em;
-        }
-
-        .prev,
-        .next {
-          padding: 12px;
-          font-size: 1.5em;
-        }
-      }
-
-      .section-title h2 {
-        text-align: center;
-        font-size: 2em;
-        color: #34495e;
-        margin-bottom: 20px;
-      }
-
-      @media (max-width: 768px) {
-        .section-title h2 {
-          font-size: 1.5em;
-        }
-      }
-
-      .section-title h2 {
-  text-align: center;
-  font-size: 2em;
-  color: #34495e;
-  margin-bottom: 20px;
-}
-
-form {
-  background-image: url("photo1.png");
-  background-position: center;
-  background-size: cover;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-  direction: rtl; /* Right-to-left text direction */
-}
-
-form h2 {
-  margin-bottom: 15px;
-  font-size: 1.8em;
-  color: wheat;
-  text-align: center; /* Center the heading */
-}
-
-form input,
-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1.1em;
-  text-align: right; /* Right-align the text for Arabic */
-  direction: rtl; /* Right-to-left text input */
-}
-
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: #e74c3c; /* Highlight border on focus */
-}
-
-form button {
-  background-color: #e74c3c;
-  color: white;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%; /* Full width for better usability */
-}
-
-form button:hover {
-  background-color: #c0392b;
-}
-
-form button:focus {
-  outline: none;
-  box-shadow: 0 0 5px #e74c3c; /* Add focus effect */
-}
-
-/* For mobile responsiveness */
-@media (max-width: 768px) {
-  form {
-    padding: 20px;
-  }
-
-  form input,
-  form textarea {
-    padding: 12px;
-  }
-
-  form button {
-    padding: 12px 25px;
-  }
-}
-
-
-      footer {
-        background-color: #34495e;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-        border-top: 4px solid #e74c3c;
-      }
-
-      /* Ramadan Countdown styles */
-      .ramadan-countdown {
-    background-color: #34495e;
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: "Cairo", sans-serif;
-    margin-bottom: 40px;
-  }
-
-  .ramadan-countdown h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-  }
-
-  .countdown-timer {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #f39c12;
-  }
-
-  .progress-bar {
-    width: 100%;
-    height: 20px;
-    background-color: #7f8c8d;
-    border-radius: 10px;
-    margin-top: 20px;
-    overflow: hidden;
-  }
-
-  .progress {
-    height: 100%;
-    width: 0%;  /* Initially empty */
-    background-color: #f39c12;
-    border-radius: 10px;
-    transition: width 1s ease; /* Smooth transition for the progress bar */
-  }
-      /* Ramadan Timetable styles */
-      .ramadan-timetable {
-        margin: 40px auto;
-        text-align: center;
-        font-family: "Cairo", sans-serif;
-      }
-
-      .ramadan-timetable h2 {
-        font-size: 2em;
-        color: #34495e;
-        margin-bottom: 20px;
-      }
-
-      .ramadan-timetable table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: #ffffff;
-        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        overflow: hidden;
-      }
-
-      .ramadan-timetable table th,
-      .ramadan-timetable table td {
-        padding: 15px;
-        border: 1px solid #ddd;
-        text-align: center;
-        font-size: 1.1em;
-      }
-
-      .ramadan-timetable table th {
-        background-color: #e74c3c;
-        color: white;
-        font-weight: bold;
-      }
-
-      .ramadan-timetable table tr:nth-child(even) {
-        background-color: #f9f9f9;
-      }
-
-      /* Responsive styles */
-      @media (max-width: 768px) {
-        .header-container {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .header-logo {
-          width: 80px;
-          margin-bottom: 15px;
-        }
-
-        .header-text h1 {
-          font-size: 1.8em;
-        }
-
-        .header-text p {
-          font-size: 1.1em;
-        }
-        .section-title h2 {
-          font-size: 35px;
-          margin-bottom: 6px;
-        }
-        .prayer-times,
-        .weather {
-          flex-direction: column;
-        }
-
-        .prayer-times div,
-        .weather div {
-          width: 100%;
-          margin-bottom: 15px;
-        }
-
-        nav a {
-          font-size: 1.1em;
-          margin: 0 10px;
-        }
-
-        form input,
-        form textarea {
-          font-size: 1em;
-        }
-
-        footer p {
-          font-size: 0.9em;
-        }
-      }
-    </style>
-  </head>
+    <div data-aos="fade-up">This will fade up on scroll</div>
+    <link rel="stylesheet" href="styles.css" />
+    </head>
 
   <body>
     <header>
@@ -429,71 +38,69 @@ form button:focus {
     <nav>
       <a href="#prayer-times">أوقات الصلاة</a>
       <a href="#weather">الطقس</a>
-      <a href="imsakia.html">إمساكية رمضان</a>
       <a href="#contact">اتصل بنا</a>
+      <a href="imsakia.html">إمساكية رمضان</a>
     </nav>
-
-    <div class="container">
-      <!-- Ramadan Countdown Section -->
+    
+    <!-- Ramadan Countdown Section -->
+    <section>
+    <div class="container" >
       <section class="ramadan-countdown">
         <h2>العد التنازلي لشهر رمضان المبارك</h2>
-        <div class="countdown-timer" id="countdown"></div>
+        <div id="countdown">
+          <span class="days"></span><span class="time-unit">يوم</span>
+          <span class="hours"></span><span class="time-unit">ساعة</span>
+          <span class="minutes"></span><span class="time-unit">دقيقة</span>
+          <span class="seconds"></span><span class="time-unit">ثانية</span>
+        </div>
         <div class="progress-bar" id="progress-bar">
           <div class="progress" id="progress"></div>
         </div>
         <p>اللهم بلغنا رمضان وبارك لنا فيه وارزقنا صيامه وقيامه</p>
       </section>
 
-      <section class="section" id="prayer-times">
-        <div class="section-title">
-          <h2>مواعيد الصلاة لهذا اليوم</h2>
-        </div>
-        <div class="prayer-times">
-          <div>
-            <h2>الفجر</h2>
-            <span id="fajr">جاري التحميل...</span>
-          </div>
-          <div>
-            <h2>الظهر</h2>
-            <span id="dhuhr">جاري التحميل...</span>
-          </div>
-          <div>
-            <h2>العصر</h2>
-            <span id="asr">جاري التحميل...</span>
-          </div>
-          <div>
-            <h2>المغرب</h2>
-            <span id="maghrib">جاري التحميل...</span>
-          </div>
-          <div>
-            <h2>العشاء</h2>
-            <span id="isha">جاري التحميل...</span>
-          </div>
-        </div>
+      
+      <!-- Prayer Times Display Section -->
+      <section class="prayer-times-display" id="prayer-times" data-aos="zoom-in" data-aos-duration="1000">
+        <h2>  أوقات الصلاة والإقامة</h2>
+        <iframe
+          src=" https://mosqueprayertimes.com/al-taquamosque"
+          allowfullscreen
+        ></iframe>
       </section>
+
 
       <section class="section" id="weather">
-        <div class="section-title">
-          <h2>طقس غريان هذه اللحظة</h2>
-        </div>
-        <div class="weather">
-          <div>
-            <h2>درجة الحرارة</h2>
-            <span id="temperature">جاري التحميل...</span>
-          </div>
-          <div>
-            <h2>الحالة</h2>
-            <span id="condition">جاري التحميل...</span>
-          </div>
-          <div>
-            <h2>المدينة</h2>
-            <span id="city">جاري التحميل...</span>
+        <div class="container">
+          <div class="weather">
+            <div class="weather-header"  data-aos="fade-up">
+              <h2 id="city-name">   </h2> <!-- Set the title for Gharyan -->
+            </div>
+            <div class="weather-item"  data-aos="flip-left">
+              <h2>الحرارة</h2>
+              <span id="temperature"></span>°C
+            </div>
+            <!-- <div class="weather-item">
+              <h2>الرياح</h2>
+              <span id="wind"></span> m/s
+            </div> -->
+            <div class="weather-item"  data-aos="flip-left">
+              <h2>الإحساس بالحرارة</h2>
+              <span id="feels-like"></span>°C
+            </div>
+            <div class="weather-item"  data-aos="flip-left">
+              <h2>الرطوبة</h2>
+              <span id="humidity"></span>%
+            </div>
+            <div class="weather-item"  data-aos="flip-left">
+              <h2>الوصف</h2>
+              <span id="description"></span>
+            </div>
           </div>
         </div>
       </section>
-      <section class="ramadan-timetable" id="imsakia"></section>
-
-      <section class="section" id="events">
+      
+      <section>
         <div class="section-title">
           <h2>الإعلانات والأحداث القادمة</h2>
         </div>
@@ -527,176 +134,32 @@ form button:focus {
  
 
       <section class="section" id="contact">
-        <form id="contact-form" action="/submit" method="POST">
-          <label for="name">اسمك</label>
-          <input type="text" id="name" name="name" required />
-          <span id="name-error" style="color: red;"></span>
-        
-          <label for="email">البريد الالكتروني</label>
-          <input type="email" id="email" name="email" required />
-          <span id="email-error" style="color: red;"></span>
-        
-          <label for="message">رسالتك</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <span id="message-error" style="color: red;"></span>
-        
+        <form action="https://formspree.io/f/xjkggzbb" method="POST">
+          <h2>اتصل بنا</h2>
+          <label>
+            بريدك الالكتروني:
+            <input type="email" name="email">
+          </label>
+          <label>
+            اكتب رسالتك هنا:
+            <textarea name="message"></textarea>
+          </label>
           <button type="submit">أرسل</button>
         </form>
       </section>
     </div>
 
     <footer>
-      <p>&copy; 2025 مسجد التقوى غريان | جميع الحقوق محفوظة</p>
-    </footer>
 
-    <script>
-      const adhanAPI =
-        "https://api.aladhan.com/v1/timingsByCity?city=Gharyan&country=Libya&method=2";
-      const weatherAPI =
-        "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Gharyan?unitGroup=metric&key=ES5LFXHVGPWF7JZP6P5F23ATZ&contentType=json";
+      <p>جميع خدمات الموقع مجانية، وإذا أعجبك، فلا تنسَ الدعاء لوالديّ.</p>
+      <p>© جميع الحقوق محفوظة - مسجد التقوى غريان</p> 
+       </footer>
+       <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+       <script>
+         AOS.init();
+       </script>
+       
+       <script src="script.js"></script>
 
-      // Ramadan Countdown script
-      function updateRamadanCountdown() {
-    const ramadanStart = new Date("2025-03-01T00:00:00"); // Adjust for your region's Ramadan start date
-    const now = new Date();
-    const remainingTime = ramadanStart - now;
-
-    if (remainingTime > 0) {
-      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor(
-        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-      document.getElementById(
-        "countdown"
-      ).textContent = `${days} يوم و ${hours} ساعات و ${minutes} دقيقة و ${seconds} ثواني`;
-
-      // Calculate progress percentage
-      const totalDuration = ramadanStart - new Date("2024-03-01T00:00:00"); // Time from last Ramadan start to current Ramadan start
-      const progressPercentage = ((totalDuration - remainingTime) / totalDuration) * 100;
-
-      // Update the progress bar width
-      document.getElementById("progress").style.width = `${progressPercentage}%`;
-
-    } else {
-      document.getElementById("countdown").textContent = "رمضان قد بدأ!";
-      document.getElementById("progress").style.width = "100%"; // Full when Ramadan starts
-    }
-  }
-
-  setInterval(updateRamadanCountdown, 1000); // Update every second
-
-      // Fetch prayer times and weather data
-      function fetchPrayerTimes() {
-        fetch(adhanAPI)
-          .then((response) => response.json())
-          .then((data) => {
-            document.getElementById("fajr").textContent =
-              data.data.timings.Fajr;
-            document.getElementById("dhuhr").textContent =
-              data.data.timings.Dhuhr;
-            document.getElementById("asr").textContent = data.data.timings.Asr;
-            document.getElementById("maghrib").textContent =
-              data.data.timings.Maghrib;
-            document.getElementById("isha").textContent =
-              data.data.timings.Isha;
-          })
-          .catch((error) => {
-            console.error("Error fetching prayer times:", error);
-            document.querySelectorAll("#prayer-times span").forEach((span) => {
-              span.textContent = "Error loading data.";
-            });
-          });
-      }
-
-      function fetchWeather() {
-        fetch(weatherAPI)
-          .then((response) => response.json())
-          .then((data) => {
-            document.getElementById(
-              "temperature"
-            ).textContent = `${data.currentConditions.temp}°C`;
-            document.getElementById("condition").textContent =
-              data.currentConditions.conditions;
-            document.getElementById("city").textContent =
-              data.address || "Unknown city";
-          })
-          .catch((error) => {
-            console.error("Error fetching weather data:", error);
-            document.querySelectorAll("#weather span").forEach((span) => {
-              span.textContent = "Error loading data.";
-            });
-          });
-      }
-
-      // Initial fetch and countdown setup
-      document.addEventListener("DOMContentLoaded", function () {
-        fetchPrayerTimes();
-        fetchWeather();
-        updateRamadanCountdown(); // Call on page load
-      });
-
-      // Toggle the visibility of the إمساكية Ramadan section when the link is clicked
-      document
-        .querySelector("a[href='#imsakia']")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default anchor behavior
-
-          var imsakiaSection = document.getElementById("imsakia");
-
-          // Toggle visibility of the إمساكية section
-          if (imsakiaSection.style.display === "none") {
-            imsakiaSection.style.display = "block";
-          } else {
-            imsakiaSection.style.display = "none";
-          }
-        });
-
-        document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent form submission to run validation first
-
-    // Clear previous error messages
-    document.getElementById("name-error").textContent = "";
-    document.getElementById("email-error").textContent = "";
-    document.getElementById("message-error").textContent = "";
-
-    let valid = true;
-
-    // Name validation
-    const name = document.getElementById("name").value;
-    if (name === "") {
-      document.getElementById("name-error").textContent = "Name is required.";
-      valid = false;
-    }
-
-    // Email validation
-    const email = document.getElementById("email").value;
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (email === "") {
-      document.getElementById("email-error").textContent = "Email is required.";
-      valid = false;
-    } else if (!emailRegex.test(email)) {
-      document.getElementById("email-error").textContent = "Please enter a valid email.";
-      valid = false;
-    }
-
-    // Message validation
-    const message = document.getElementById("message").value;
-    if (message === "") {
-      document.getElementById("message-error").textContent = "Message cannot be empty.";
-      valid = false;
-    }
-
-    // If valid, submit the form
-    if (valid) {
-      this.submit();
-    }
-  });
-
-    </script>
   </body>
 </html>

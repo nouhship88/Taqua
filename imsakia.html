@@ -160,7 +160,7 @@
       /* Eid Prayer */
       .eid-prayer {
         margin-top: 30px;
-        font-size: 1.4em;
+        font-size: 15px;
         font-weight: bold;
         color: #edeff1;
       }
@@ -215,6 +215,42 @@
           padding: 6px 10px;
         }
       }
+
+      /* Top link styling */
+.back-home-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.back-home-link:hover {
+  background-color: #ddd;
+}
+
+/* Bottom button styling */
+.go-home-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.go-home-button:hover {
+  background-color: #45a049;
+}
+
     </style>
   </head>
   <body class="dark-mode">
@@ -249,11 +285,14 @@
     <!-- Eid Prayer Note -->
     <section class="eid-prayer">
       <p>ملاحظة: سيتم الإعلان عن موعد صلاة العيد لاحقاً بمشيئة الله تعالى!</p>
+      <a href="index.html" class="go-home-button">العودة إلى الصفحة الرئيسية</a> <!-- Button to Home Page -->
+
     </section>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 مسجد التقوى غريان | جميع الحقوق محفوظة</p>
+      
     </footer>
 
     <script>
