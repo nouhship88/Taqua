@@ -331,6 +331,7 @@ form {
     direction: rtl;
     max-width: 600px;
     margin: 30px auto;
+    color: #c5cda7;
   }
 
   form h2 {
