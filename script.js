@@ -447,3 +447,13 @@ displayAthkar();
 
 // Update the athkar every minute to ensure it reflects the correct time
 setInterval(displayAthkar, 60000);
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
