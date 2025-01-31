@@ -307,7 +307,7 @@ function showResults(isStopped = false) {
   resultScreen.style.display = "block";
   finalScore.textContent = `مجموعك النهائي: ${score} / ${questions.length}`;
   finalFeedback.textContent = isStopped
-    ? "لقد أوقفت اللعبة! شكراً لمشاركتك."
+    ? "لقد أوقفت الاختبار! شكراً لمشاركتك."
     : score === questions.length
     ? "رائع! لقد أجبت على جميع الأسئلة بشكل صحيح."
     : "حاول تحسين نتيجتك المرة القادمة!";
