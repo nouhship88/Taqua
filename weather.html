@@ -159,6 +159,28 @@
         border-radius: 10px;
       }
 
+      .scroll-hint {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #666;
+        animation: bounce 1.5s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          opacity: 0.3;
+          transform: translateY(-50%) translateX(0);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(-50%) translateX(5px);
+        }
+      }
+
       footer {
         text-align: center;
         padding: 15px;
@@ -169,7 +191,6 @@
       }
       .go-home-button {
         color: antiquewhite;
-    
       }
       /* Keyframe animation for fading in the weather info */
       @keyframes fadeIn {
@@ -186,7 +207,7 @@
   <body>
     <header>
       <h1>الطقس في مدينة غريان هذه اللحظة</h1>
-       <a href="index.html" class="go-home-button">العودة إلى الصفحة الرئيسية</a>
+      <a href="index.html" class="go-home-button">العودة إلى الصفحة الرئيسية</a>
       <!-- Button to Home Page -->
     </header>
 
@@ -251,6 +272,9 @@
       <div class="hourly-forecast" id="hourly-forecast">
         <!-- Hourly data will be inserted here -->
       </div>
+      <p style="text-align: center; font-size: 14px; color: #666;">
+        يمكنك السحب لليمين واليسار لرؤية المزيد من التوقعات →
+      </p>
     </div>
 
     <footer>
