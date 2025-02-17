@@ -50,7 +50,9 @@ function updateRamadanCountdown() {
     document.getElementById("progress").style.width = `${Math.min(progressPercentage, 100)}%`;
 
   } else {
-    document.getElementById("countdown").textContent = "رمضان قد بدأ!";
+    document.getElementById("countdown").textContent = " رمضان قد بدأ! 🎉🌙 رمضان مبارك! استقبلوا الشهر الفضيل بالفرح والتقوى! 🕌✨"
+
+;
     document.getElementById("progress").style.width = "100%"; // Full when Ramadan starts
     clearInterval(interval); // Stop the countdown
   }
@@ -448,3 +450,25 @@ displayAthkar();
 // Update the athkar every minute to ensure it reflects the correct time
 setInterval(displayAthkar, 60000);
 
+(function() {
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('#ramadan-tips-section .slide');
+  const totalSlides = slides.length;
+
+  // Function to show the current slide and hide others
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active'); // Hide all slides
+    });
+    slides[index].classList.add('active'); // Show the current slide
+  }
+
+  // Initialize first slide as visible
+  showSlide(currentIndex);
+
+  // Automatic slide change every 7 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides; // Loop through slides
+    showSlide(currentIndex);
+  }, 7000); // Change every 7 seconds
+})();

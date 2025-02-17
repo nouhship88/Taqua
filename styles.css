@@ -567,6 +567,152 @@ footer a:hover {
   background-color: #f9f9f9;
 }
 
+
+/* Ramadan Tips Section Styling */
+#ramadan-tips-section {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('5110786.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Container */
+#ramadan-tips-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Section Header */
+#ramadan-tips-section .section-header {
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  position: relative;
+  display: inline-block;
+}
+
+/* Add a decorative underline to the header */
+#ramadan-tips-section .section-header::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Slider Container */
+#ramadan-tips-section .slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+/* Individual Slide */
+#ramadan-tips-section .slide {
+  min-width: 100%;
+  padding: 40px;
+  background: rgba(65, 77, 82, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateX(100%);
+}
+
+/* Slide Header */
+#ramadan-tips-section .slide-header {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  color: #F39C12;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Slide Text */
+#ramadan-tips-section .slide-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Active Slide */
+#ramadan-tips-section .slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+/* Add a subtle animation to the active slide */
+#ramadan-tips-section .slide.active {
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  #ramadan-tips-section .section-header {
+    font-size: 2.5rem;
+  }
+
+  #ramadan-tips-section .slide-header {
+    font-size: 2rem;
+  }
+
+  #ramadan-tips-section .slide-text {
+    font-size: 1.2rem;
+  }
+
+  #ramadan-tips-section .slider {
+    padding: 10px;
+  }
+
+  #ramadan-tips-section .slide {
+    padding: 20px;
+  }
+}
 /* AOS Animations */
 [data-aos="fade-up"] {
     opacity: 0;
