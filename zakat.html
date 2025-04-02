@@ -23,7 +23,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, rgb(44, 62, 80), rgb(169, 159, 95));
+    background-color: #34495e;
     padding: 20px;
     color: white;
     text-align: center;
@@ -111,7 +111,7 @@ input:focus {
 button {
     padding: 12px 20px;
     font-size: 16px;
-    background-color: rgb(44, 62, 80);
+    background-color: #1abc9c;
     color: white;
     border: none;
     border-radius: 8px;
@@ -246,7 +246,7 @@ footer {
 
 /* Start Over Button Styles */
 .start-over-button {
-    background-color: rgb(44, 62, 80);
+    background-color: #f39c12;
     color: white;
     border: none;
     border-radius: 8px;
@@ -268,12 +268,12 @@ footer {
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 10px 16px;
+    padding: 10px;
     font-size: 12px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     margin-top: 30px;
-    width: 50%;
+    width: 20%;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -452,9 +452,9 @@ margin:auto;
         <button class="start-over-button" onclick="startOver()">ابدأ من جديد</button>
     </div>
 
-    <p class="note"> * يتم حساب الزكاة بنسبة 2.5% من إجمالي المال الذي يتجاوز النصاب - آخر تحديث 29 - شعبان - 1446 هـ. 
-        28 - فبراير - 2025 مـ.
-        - نصاب زكاة المال المقدر بـ (الذهـب) هو: (51,850)  د.ل</p>
+    <p class="note"> * يتم حساب الزكاة بنسبة 2.5% من إجمالي المال الذي يتجاوز النصاب - آخر تحديث 29 - رَمَضَانَ  - 1446 هـ. 
+        29 - مارس - 2025 مـ.
+        - نصاب زكاة المال المقدر بـ (الذهـب) هو: (57,715)  د.ل</p>
 
 </div>
 <a href="index.html" class="go-home-button">العودة إلى الصفحة الرئيسية</a> <!-- Button to Home Page -->
@@ -464,7 +464,7 @@ margin:auto;
 </footer>
 
 <script>
-    const nisab = 51850; // Updated nisab value from the Zakat Fund in LYD
+    const nisab = 57715; // Updated nisab value from the Zakat Fund in LYD
     let currentStep = 1;
 
     function nextStep(step) {

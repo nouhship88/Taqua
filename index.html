@@ -11,7 +11,7 @@
       name="keywords"
       content="مسجد التقوى غريان, أوقات الصلاة في غريان, الطقس غريان, غريان, رمضان ليبيا, درجة الحرارة في غريان"
     />
-    <meta name="google-site-verification" content="rKS_Xd0f2TuM32-9ok577IGPyBrMOarv0_mm1ussVrE" />    
+    <meta name="google-site-verification" content="rKS_Xd0f2TuM32-9ok577IGPyBrMOarv0_mm1ussVrE" />
     <meta property="og:image" content="https://www.altaqwa.ly/photo1.png" />
     <meta property="og:url" content="https://www.altaqwa.ly/">
     <meta property="og:type" content="website">
@@ -27,6 +27,14 @@
     <link rel="icon" href="logo.png" type="image/x-icon" />
     <div data-aos="fade-up"></div>
     <link rel="stylesheet" href="styles.css" />
+<!-- Load jQuery FIRST -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Then load Slick Slider JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<!-- Your custom JS (if any) should come AFTER -->
+<script src="script.js"></script>
     </head>
 
   <body>
@@ -48,26 +56,10 @@
       <a href="imsakia.html">إمساكية رمضان</a>
       <a href="#contact">اتصل بنا</a>
 
-    </nav>
-    
-    <!-- Ramadan Countdown Section -->
-    <section>
-    <div class="container" >
-      <section class="ramadan-countdown">
-        <h2>العد التنازلي لشهر رمضان المبارك</h2>
-        <div id="countdown">
-          <span class="days"></span><span class="time-unit">يوم</span>
-          <span class="hours"></span><span class="time-unit">ساعة</span>
-          <span class="minutes"></span><span class="time-unit">دقيقة</span>
-          <span class="seconds"></span><span class="time-unit">ثانية</span>
-        </div>
-        <div class="progress-bar" id="progress-bar">
-          <div class="progress" id="progress"></div>
-        </div>
-        <p id="doa">اللهم بلغنا رمضان وبارك لنا فيه وارزقنا صيامه وقيامه</p>
-      </section>
+    </nav>  
 
-      
+   
+
       <!-- Prayer Times Display Section -->
       <section class="prayer-times-display" id="prayer-times" data-aos="zoom-in" data-aos-duration="1000">
         <h2>  أوقات الصلاة والإقامة</h2>
@@ -110,51 +102,7 @@
         </div>
       </section>
 
-      <section id="ramadan-tips-section">
-        <div class="container">
-          <h2 class="section-header">نصائح رمضانية</h2>
-          <div class="slider">
-            <div class="slide">
-              <h3 class="slide-header">تأمل في الصوم</h3>
-              <p class="slide-text">الصوم هو أكثر من الامتناع عن الطعام والشراب. هو فرصة للتأمل، لتنقية القلب والروح، وللتقرب من الله.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">الصحبة الطيبة</h3>
-              <p class="slide-text">تواصل مع من حولك، وشارك لحظات الإفطار مع الأهل والأصدقاء. رمضان هو فرصة لبناء روابط أخوية قوية.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">القيام بالعبادات</h3>
-              <p class="slide-text">خصص وقتًا لصلاة التراويح وقراءة القرآن. هذه العبادات تقربنا من الله وتزيد من بركات الشهر الفضيل.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">لا تقنط</h3>
-              <p class="slide-text"> اعلم أن الله أكرم الأكرمين وأرحم الراحمين ويقبل التوبة من التائبين.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">الاعتناء بالجسم</h3>
-              <p class="slide-text">في رمضان، حافظ على صحتك بتناول طعام صحي ومغذي، مثل التمر والخضروات، واحرص على شرب الماء في السحور والإفطار لتجنب الجفاف.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">الاسترخاء والراحة</h3>
-              <p class="slide-text">خصص وقتًا للراحة والاسترخاء. يساعد النوم الجيد في تجديد الطاقة للعبادة والعمل خلال النهار.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">مساعدة الآخرين</h3>
-              <p class="slide-text">ساهم في فعل الخير خلال الشهر المبارك. قد تكون مساعدة محتاج أو تقديم وجبة إفطار للمساكين من أكثر الأعمال التي تقربك إلى الله.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">التخطيط لحياة أفضل</h3>
-              <p class="slide-text">استخدم رمضان كفرصة لتطوير نفسك. ضع أهدافًا شخصية ودينية وركز على النمو الروحي والعقلي والجسدي لتستمر بعد رمضان.</p>
-            </div>
-            <div class="slide">
-              <h3 class="slide-header">الدعاء للآخرين</h3>
-              <p class="slide-text">لا تنسَ الدعاء للآخرين. رمضان هو الشهر الذي تفتح فيه أبواب الرحمة، فدُعِ الآخرين بالخير وتمنى لهم الصحة والسلامة.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
+
 
       <section class="section">
         <div class="container">
@@ -181,37 +129,9 @@
  </section>
 
 
-     <section class="section" id="quiz">
-  <div class="container">
-    <div class="quiz-container" id="start-screen">
-      <h2 class="quiz-title">اختبر معلوماتك</h2>
-      <button class="quiz-button" id="start-button">ابدأ الاختبار</button>
-    </div>
-  
-    <div class="quiz-container" id="quiz-screen" style="display: none;">
-      <h2 class="quiz-title">اختبار معلوماتك</h2>
-      <p class="quiz-question" id="question"></p>
-      <ul class="quiz-options" id="options"></ul>
-      <div class="quiz-controls">
-        <button class="quiz-button" id="stop-button">إيقاف</button>
-        <div id="timer" class="quiz-timer">00:15</div>
-      </div>
-      <p id="feedback" class="quiz-feedback"></p>
-      <p id="question-counter"></p>
-    </div>
-  
-    <div class="quiz-container" id="result-screen" style="display: none;">
-      <h2 class="quiz-title">النتائج النهائية</h2>
-      <p id="final-score"></p>
-      <p id="final-feedback"></p>
-      <button class="quiz-button" id="restart-button">إعادة الاختبار</button>
-    </div>
-  </div>
-</section>
 
-      
-      
- 
+
+
       <section>
         <div class="section-title">
           <h2>الإعلانات والأحداث القادمة</h2>
@@ -221,7 +141,7 @@
             <h3>دورة تعليمية جديدة</h3>
             <p>
               سيتم تنظيم دورات تعليمية حول القرآن الكريم في مسجد التقوى قريبًا.
-              
+
             </p>
             <span class="event-date">التاريخ: 1 مارس 2025</span>
           </div>
@@ -243,7 +163,7 @@
           </div>
         </div>
       </section>
- 
+
 
       <section class="section" id="contact">
         <form action="https://formspree.io/f/xjkggzbb" method="POST">
@@ -263,15 +183,35 @@
 
     <footer>
 
-      <p>جميع خدمات الموقع مجانية، وإذا أعجبك، فلا تنسَ الدعاء لوالديّ.</p>
-      <p>© جميع الحقوق محفوظة - مسجد التقوى غريان</p> 
+      <p>© جميع الحقوق محفوظة - مسجد التقوى غريان</p>
+      <p class="developer-credit">تصميم وتطوير: <span>نوح الشنطة</span></p>
        </footer>
+       
        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+       
        <script>
          AOS.init();
        </script>
-       
-       <script src="script.js"></script>
 
+       <script src="script.js"></script>
+ 
+  
+
+  
+    <script>
+        $(document).ready(function(){
+            $('.slick-slider').slick({
+                infinite: true,       // Infinite loop
+                slidesToShow: 1,      // Show 1 slide at a time
+                slidesToScroll: 1,    // Scroll 1 slide at a time
+                dots: true,           // Show navigation dots
+                arrows: true,         // Show arrows for navigation
+                autoplay: true,       // Auto slide every 3 seconds
+                autoplaySpeed: 3000,  // 3 seconds delay for auto slide
+                pauseOnHover: true    // Pause when hover over the slider
+            });
+        });
+    </script>
+  
   </body>
 </html>
